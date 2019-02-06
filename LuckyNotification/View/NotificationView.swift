@@ -118,7 +118,8 @@ open class NotificationView: UIVisualEffectView {
         if iconImageView.image != .none {
             availableTextWidth -= self.iconSize.width + self.spacing
         }
-        let availableTextSize = CGSize(width: availableTextWidth, height: CGFloat.greatestFiniteMagnitude)
+        let trimPadding: CGFloat = 8 // Needed to force the first calculation of text heights
+        let availableTextSize = CGSize(width: availableTextWidth - trimPadding, height: CGFloat.greatestFiniteMagnitude)
         let titleHeight = self.titleLabel.sizeThatFits(availableTextSize).height
         let descriptionHeight = self.descriptionLabel.sizeThatFits(availableTextSize).height
         let totalTextHeight = titleHeight + descriptionHeight

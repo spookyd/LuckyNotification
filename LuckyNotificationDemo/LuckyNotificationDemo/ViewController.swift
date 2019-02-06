@@ -18,11 +18,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func handleShowMessage(_ sender: Any) {
-        notification.showNotification(icon: #imageLiteral(resourceName: "errorIcon"), title: "Test", description: "Some test description")
+        notification.showNotification(icon: #imageLiteral(resourceName: "errorIcon"), title: "Test", description: "Sorry, you've been invited to an accepted group at Stanford University. Upload your acceptance letter to gain access.")
     }
     
     @IBAction func handleShowLocalNotification(_ sender: Any) {
-        
+        var notification = Notification(message: NSAttributedString(string: "Sorry, you've been invited to an accepted group at Stanford University. Upload your acceptance letter to gain access."))
+        notification.icon = #imageLiteral(resourceName: "errorIcon")
+        LuckyNotification.showNotification(notification)
     }
     
     private var transitionManager = NotificationTransitionManager()
