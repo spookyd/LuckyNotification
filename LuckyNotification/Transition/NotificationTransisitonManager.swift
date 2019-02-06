@@ -17,6 +17,14 @@ public class NotificationTransitionManager: NSObject, NotificationTransitioningD
 
     public var interactionTransition: UIPercentDrivenInteractiveTransition?
     private var presentationController: NotificationPresentationController?
+    private var configuration: NotificationConfiguration = .default {
+        didSet {
+            guard let presentationController = self.presentationController else {
+                return
+            }
+            updatePresentationControllerConfiguration()
+        }
+    }
 
     public private(set) var isDismisCompleted: Bool = false
 
@@ -25,11 +33,7 @@ public class NotificationTransitionManager: NSObject, NotificationTransitioningD
     }
 
     public func updateConfiguration(_ configuration: NotificationConfiguration) {
-        presentationController?.edgeInsets = configuration.layoutPadding
-        presentationController?.shadowRadius = configuration.shadowRadius
-        presentationController?.shadowOpacity = configuration.shadowOpacity
-        presentationController?.shadowColor = configuration.shadowColor
-        presentationController?.shadowOffset = configuration.shadowOffset
+        self.configuration = configuration
     }
 
     @objc
@@ -56,6 +60,15 @@ public class NotificationTransitionManager: NSObject, NotificationTransitioningD
             interactionTransition = nil
         }
     }
+    
+    fileprivate func updatePresentationControllerConfiguration() {
+        presentationController?.minimumHeight = configuration.minimumHeight
+        presentationController?.edgeInsets = configuration.layoutPadding
+        presentationController?.shadowRadius = configuration.shadowRadius
+        presentationController?.shadowOpacity = configuration.shadowOpacity
+        presentationController?.shadowColor = configuration.shadowColor
+        presentationController?.shadowOffset = configuration.shadowOffset
+    }
 
 }
 
@@ -63,6 +76,7 @@ extension NotificationTransitionManager {
 
     public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         self.presentationController = NotificationPresentationController(presentedViewController: presented, presenting: presenting)
+        updatePresentationControllerConfiguration()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))
         self.presentationController?.presentedView?.addGestureRecognizer(panGesture)
         return self.presentationController

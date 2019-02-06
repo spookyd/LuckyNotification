@@ -14,6 +14,7 @@ public class NotificationPresentationController: UIPresentationController {
 
     private var passthroughView: PassthroughView?
 
+    var minimumHeight: CGFloat = NotificationConfiguration.default.minimumHeight
     var shadowOffset: CGSize = NotificationConfiguration.default.shadowOffset
     var shadowColor: UIColor = NotificationConfiguration.default.shadowColor
     var shadowOpacity: Float = NotificationConfiguration.default.shadowOpacity
@@ -53,7 +54,7 @@ public class NotificationPresentationController: UIPresentationController {
         let horizontalPadding = self.edgeInsets.top + self.edgeInsets.bottom
         let maxHeight: CGFloat = parentSize.height - horizontalPadding
         let height = calculateFittingMetric(preferredContentSize.height, restrictedBy: maxHeight)
-        return CGSize(width: width, height: height)
+        return CGSize(width: width, height: max(minimumHeight, height))
     }
 
     private func calculateFittingMetric(_ metric: CGFloat, restrictedBy restrictingMetric: CGFloat) -> CGFloat {

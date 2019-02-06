@@ -61,6 +61,16 @@ public struct NotificationConfiguration {
     public var descriptionColor: UIColor
 
     // MARK: - Presentation Appearance
+    
+    /**
+     Defines the minimum height that the notification should be displayed.
+     
+     If the calculated content height is greater than the minimum height the content height will be used.
+     
+     Default: noIntrinsicMetric
+    */
+    public var minimumHeight: CGFloat
+    
     /// The shadow offset to be applied to the presented notification. Default: width: 0, height: 5
     public var shadowOffset: CGSize
 
@@ -89,6 +99,7 @@ extension NotificationConfiguration {
                                         titleColor: UIColor(white: 0, alpha: 0.84),
                                         descriptionFont: UIFont.preferredFont(forTextStyle: UIFont.TextStyle.subheadline),
                                         descriptionColor: UIColor(white: 0, alpha: 0.64),
+                                        minimumHeight: UIView.noIntrinsicMetric,
                                         shadowOffset: CGSize(width: 0, height: 5),
                                         shadowColor: UIColor.black,
                                         shadowOpacity: 0.4,
