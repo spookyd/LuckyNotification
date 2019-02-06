@@ -13,10 +13,20 @@ public struct Notification {
     public var icon: UIImage?
     public var title: String?
     public var description: String?
+    var message: NSAttributedString?
 
     public init(icon: UIImage? = .none, title: String? = .none, description: String? = .none) {
         self.icon = icon
         self.title = title
         self.description = description
+        self.message = .none
     }
+    
+    public init(icon: UIImage? = .none, message: NSAttributedString? = .none) {
+        self.icon = icon
+        self.title = .none
+        self.description = message?.string
+        self.message = message
+    }
+    
 }

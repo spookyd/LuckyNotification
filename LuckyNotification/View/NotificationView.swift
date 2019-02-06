@@ -120,6 +120,12 @@ open class NotificationView: UIVisualEffectView {
         }
         return CGSize(width: UIView.noIntrinsicMetric, height: paddedHeight)
     }
+    
+    open override func layoutSubviews() {
+        titleLabel.isHidden = titleLabel.text?.isEmpty ?? true
+        descriptionLabel.isHidden = descriptionLabel.text?.isEmpty ?? true
+        super.layoutSubviews()
+    }
 
     private func commonInit() {
         self.clipsToBounds = true

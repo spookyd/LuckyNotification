@@ -31,7 +31,6 @@ public class LuckyNotification {
             } else {
                 self.notificationViewController.notificationView.layoutMargins = configuration.layoutMargin.toUIEdgeInsets()
             }
-//            self.notificationViewController.notificationView.directionalLayoutMargins = configuration.layoutMargin
             self.notificationViewController.notificationView.iconSize = configuration.iconSize
             self.notificationViewController.notificationView.spacing = configuration.contentSpacing
             self.notificationViewController.notificationView.titleLabel.font = configuration.titleFont
@@ -97,6 +96,9 @@ public class LuckyNotification {
         self.notificationViewController.notificationView.image = notification.icon
         self.notificationViewController.notificationView.titleLabel.text = notification.title
         self.notificationViewController.notificationView.descriptionLabel.text = notification.description
+        if let message = notification.message {
+            self.notificationViewController.notificationView.descriptionLabel.attributedText = message
+        }
         self.notificationViewController.notificationView.setNeedsLayout()
 
         if self.applicationTopMostViewController == self.notificationViewController {
