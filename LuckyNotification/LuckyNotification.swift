@@ -26,7 +26,12 @@ public class LuckyNotification {
         didSet {
             // Update Notification
             self.notificationViewController.view.layer.cornerRadius = configuration.cornerRadius
-            self.notificationViewController.notificationView.directionalLayoutMargins = configuration.layoutMargin
+            if #available(iOS 11.0, *) {
+                self.notificationViewController.notificationView.directionalLayoutMargins = configuration.layoutMargin.toNSDirectionalEdgeInsets()
+            } else {
+                self.notificationViewController.notificationView.layoutMargins = configuration.layoutMargin.toUIEdgeInsets()
+            }
+//            self.notificationViewController.notificationView.directionalLayoutMargins = configuration.layoutMargin
             self.notificationViewController.notificationView.iconSize = configuration.iconSize
             self.notificationViewController.notificationView.spacing = configuration.contentSpacing
             self.notificationViewController.notificationView.titleLabel.font = configuration.titleFont

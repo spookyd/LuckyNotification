@@ -13,7 +13,11 @@ open class NotificationViewController: UIViewController {
     lazy var notificationView: NotificationView = {
         let view = NotificationView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
+        if #available(iOS 11.0, *) {
+            view.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
+        } else {
+            view.layoutMargins = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        }
         return view
     }()
 
@@ -38,7 +42,12 @@ open class NotificationViewController: UIViewController {
     }
 
     private func pinNotificationView() {
-        let safeArea = self.view.safeAreaLayoutGuide
+        let safeArea: UILayoutGuide
+        if #available(iOS 11.0, *) {
+            safeArea = self.view.safeAreaLayoutGuide
+        } else {
+            safeArea = self.view.layoutMarginsGuide
+        }
         NSLayoutConstraint.activate([
             notificationView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
             notificationView.topAnchor.constraint(equalTo: safeArea.topAnchor),

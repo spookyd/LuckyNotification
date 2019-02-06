@@ -26,9 +26,14 @@ public class NotificationPresentationController: UIPresentationController {
     public override var frameOfPresentedViewInContainerView: CGRect {
         guard let containerView = self.containerView else { return .zero }
         let size = self.size(forChildContentContainer: presentedViewController, withParentContainerSize: containerView.frame.size)
-        let x = (containerView.frame.width - size.width) / 2
-        let y = presentingViewController.view.safeAreaInsets.top + self.edgeInsets.top
-        let origin = CGPoint(x: x, y: y)
+        let presentedX = (containerView.frame.width - size.width) / 2
+        let presentedY: CGFloat
+        if #available(iOS 11.0, *) {
+            presentedY = presentingViewController.view.safeAreaInsets.top + self.edgeInsets.top
+        } else {
+            presentedY = presentingViewController.view.layoutMargins.top + self.edgeInsets.top
+        }
+        let origin = CGPoint(x: presentedX, y: presentedY)
         return CGRect(origin: origin, size: size)
     }
 

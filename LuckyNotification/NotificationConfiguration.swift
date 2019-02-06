@@ -8,6 +8,29 @@
 
 import UIKit
 
+
+/// A shim for directional support on ios 10.
+public struct DirectionalEdgeInsets {
+    public var top: CGFloat
+    public var leading: CGFloat
+    public var bottom: CGFloat
+    public var trailing: CGFloat
+    public init(top: CGFloat, leading: CGFloat, bottom: CGFloat, trailing: CGFloat) {
+        self.leading = leading
+        self.top = top
+        self.trailing = trailing
+        self.bottom = bottom
+    }
+    func toUIEdgeInsets() -> UIEdgeInsets {
+        return UIEdgeInsets(top: self.top, left: self.leading, bottom: self.bottom, right: self.trailing)
+    }
+    @available(iOS 11.0, *)
+    func toNSDirectionalEdgeInsets() -> NSDirectionalEdgeInsets {
+        return NSDirectionalEdgeInsets(top: self.top, leading: self.leading, bottom: self.bottom, trailing: self.trailing)
+    }
+    
+}
+
 public struct NotificationConfiguration {
     // MARK: - Notification Layout
 
@@ -15,7 +38,7 @@ public struct NotificationConfiguration {
     public var layoutPadding: UIEdgeInsets
 
     /// The margin to be applied to the content within the notification. Default: top: 20, leading: 20, bottom: 20, trailing: 20
-    public var layoutMargin: NSDirectionalEdgeInsets
+    public var layoutMargin: DirectionalEdgeInsets
 
     /// The size of the icon on the leading edge. Default is 40 x 40
     public var iconSize: CGSize
@@ -59,7 +82,7 @@ public struct NotificationConfiguration {
 extension NotificationConfiguration {
     public static let `default`: NotificationConfiguration = {
        return NotificationConfiguration(layoutPadding: UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16),
-                                        layoutMargin: NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20),
+                                        layoutMargin: DirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20),
                                         iconSize: CGSize(width: 40, height: 40),
                                         contentSpacing: 8,
                                         titleFont: UIFont.preferredFont(forTextStyle: UIFont.TextStyle.headline),
