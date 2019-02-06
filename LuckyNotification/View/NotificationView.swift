@@ -114,7 +114,7 @@ open class NotificationView: UIVisualEffectView {
         } else {
             horizontalMargin = self.layoutMargins.left + self.layoutMargins.right
         }
-        var availableTextWidth: CGFloat = self.bounds.width - horizontalMargin
+        var availableTextWidth: CGFloat = (self.superview?.bounds.width ?? 0) - horizontalMargin
         if iconImageView.image != .none {
             availableTextWidth -= self.iconSize.width + self.spacing
         }

@@ -99,6 +99,7 @@ public class LuckyNotification {
         if let message = notification.message {
             self.notificationViewController.notificationView.descriptionLabel.attributedText = message
         }
+        self.notificationViewController.notificationView.invalidateIntrinsicContentSize()
         self.notificationViewController.notificationView.setNeedsLayout()
 
         if self.applicationTopMostViewController == self.notificationViewController {
