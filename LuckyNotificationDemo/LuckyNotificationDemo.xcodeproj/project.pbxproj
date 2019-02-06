@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		842DB05F220A7B300039F40B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842DB05E220A7B300039F40B /* Assets.xcassets */; };
+		842DB062220A7B300039F40B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842DB060220A7B300039F40B /* LaunchScreen.storyboard */; };
+		842DB084220A7BC90039F40B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DB081220A7BC90039F40B /* AppDelegate.swift */; };
+		842DB085220A7BC90039F40B /* MessageEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DB082220A7BC90039F40B /* MessageEditorViewController.swift */; };
+		842DB086220A7BC90039F40B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DB083220A7BC90039F40B /* ViewController.swift */; };
+		842DB088220A7BE80039F40B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842DB087220A7BE80039F40B /* Main.storyboard */; };
+		842DB089220A7C230039F40B /* LuckyNotification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842DB06E220A7B4D0039F40B /* LuckyNotification.framework */; };
+		842DB08A220A7C230039F40B /* LuckyNotification.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 842DB06E220A7B4D0039F40B /* LuckyNotification.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		842DB06D220A7B4D0039F40B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 842DB069220A7B4D0039F40B /* LuckyNotification.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 842DB040220A7B010039F40B;
+			remoteInfo = LuckyNotification;
+		};
+		842DB08B220A7C230039F40B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 842DB069220A7B4D0039F40B /* LuckyNotification.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 842DB03F220A7B010039F40B;
+			remoteInfo = LuckyNotification;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		842DB08D220A7C240039F40B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				842DB08A220A7C230039F40B /* LuckyNotification.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		842DB054220A7B2F0039F40B /* LuckyNotificationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyNotificationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		842DB05E220A7B300039F40B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		842DB061220A7B300039F40B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		842DB063220A7B300039F40B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		842DB069220A7B4D0039F40B /* LuckyNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LuckyNotification.xcodeproj; path = ../LuckyNotification.xcodeproj; sourceTree = "<group>"; };
+		842DB080220A7BC80039F40B /* LuckyNotificationDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LuckyNotificationDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		842DB081220A7BC90039F40B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		842DB082220A7BC90039F40B /* MessageEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageEditorViewController.swift; sourceTree = "<group>"; };
+		842DB083220A7BC90039F40B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		842DB087220A7BE80039F40B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		842DB051220A7B2F0039F40B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842DB089220A7C230039F40B /* LuckyNotification.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		842DB04B220A7B2F0039F40B = {
+			isa = PBXGroup;
+			children = (
+				842DB069220A7B4D0039F40B /* LuckyNotification.xcodeproj */,
+				842DB056220A7B2F0039F40B /* LuckyNotificationDemo */,
+				842DB055220A7B2F0039F40B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		842DB055220A7B2F0039F40B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				842DB054220A7B2F0039F40B /* LuckyNotificationDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		842DB056220A7B2F0039F40B /* LuckyNotificationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				842DB081220A7BC90039F40B /* AppDelegate.swift */,
+				842DB082220A7BC90039F40B /* MessageEditorViewController.swift */,
+				842DB083220A7BC90039F40B /* ViewController.swift */,
+				842DB05E220A7B300039F40B /* Assets.xcassets */,
+				842DB087220A7BE80039F40B /* Main.storyboard */,
+				842DB060220A7B300039F40B /* LaunchScreen.storyboard */,
+				842DB063220A7B300039F40B /* Info.plist */,
+				842DB080220A7BC80039F40B /* LuckyNotificationDemo-Bridging-Header.h */,
+			);
+			path = LuckyNotificationDemo;
+			sourceTree = "<group>";
+		};
+		842DB06A220A7B4D0039F40B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				842DB06E220A7B4D0039F40B /* LuckyNotification.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		842DB053220A7B2F0039F40B /* LuckyNotificationDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842DB066220A7B300039F40B /* Build configuration list for PBXNativeTarget "LuckyNotificationDemo" */;
+			buildPhases = (
+				842DB050220A7B2F0039F40B /* Sources */,
+				842DB051220A7B2F0039F40B /* Frameworks */,
+				842DB052220A7B2F0039F40B /* Resources */,
+				842DB08D220A7C240039F40B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				842DB08C220A7C230039F40B /* PBXTargetDependency */,
+			);
+			name = LuckyNotificationDemo;
+			productName = LuckyNotificationDemo;
+			productReference = 842DB054220A7B2F0039F40B /* LuckyNotificationDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		842DB04C220A7B2F0039F40B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Lucky 13 Technologies, LLC";
+				TargetAttributes = {
+					842DB053220A7B2F0039F40B = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+				};
+			};
+			buildConfigurationList = 842DB04F220A7B2F0039F40B /* Build configuration list for PBXProject "LuckyNotificationDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 842DB04B220A7B2F0039F40B;
+			productRefGroup = 842DB055220A7B2F0039F40B /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 842DB06A220A7B4D0039F40B /* Products */;
+					ProjectRef = 842DB069220A7B4D0039F40B /* LuckyNotification.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				842DB053220A7B2F0039F40B /* LuckyNotificationDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		842DB06E220A7B4D0039F40B /* LuckyNotification.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LuckyNotification.framework;
+			remoteRef = 842DB06D220A7B4D0039F40B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		842DB052220A7B2F0039F40B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842DB088220A7BE80039F40B /* Main.storyboard in Resources */,
+				842DB062220A7B300039F40B /* LaunchScreen.storyboard in Resources */,
+				842DB05F220A7B300039F40B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		842DB050220A7B2F0039F40B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842DB086220A7BC90039F40B /* ViewController.swift in Sources */,
+				842DB084220A7BC90039F40B /* AppDelegate.swift in Sources */,
+				842DB085220A7BC90039F40B /* MessageEditorViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		842DB08C220A7C230039F40B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LuckyNotification;
+			targetProxy = 842DB08B220A7C230039F40B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		842DB060220A7B300039F40B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				842DB061220A7B300039F40B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		842DB064220A7B300039F40B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		842DB065220A7B300039F40B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		842DB067220A7B300039F40B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8UV9BMHPZS;
+				INFOPLIST_FILE = LuckyNotificationDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = technology.lucky13.LuckyNotificationDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LuckyNotificationDemo/LuckyNotificationDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		842DB068220A7B300039F40B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8UV9BMHPZS;
+				INFOPLIST_FILE = LuckyNotificationDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = technology.lucky13.LuckyNotificationDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LuckyNotificationDemo/LuckyNotificationDemo-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		842DB04F220A7B2F0039F40B /* Build configuration list for PBXProject "LuckyNotificationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842DB064220A7B300039F40B /* Debug */,
+				842DB065220A7B300039F40B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842DB066220A7B300039F40B /* Build configuration list for PBXNativeTarget "LuckyNotificationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842DB067220A7B300039F40B /* Debug */,
+				842DB068220A7B300039F40B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 842DB04C220A7B2F0039F40B /* Project object */;
+}
