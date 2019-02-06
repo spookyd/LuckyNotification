@@ -108,8 +108,20 @@ open class NotificationView: UIVisualEffectView {
     }
 
     open override var intrinsicContentSize: CGSize {
-        // Calculate height
-        let totalTextHeight = self.titleLabel.intrinsicContentSize.height + self.descriptionLabel.intrinsicContentSize.height
+        let horizontalMargin: CGFloat
+        if #available(iOS 11.0, *) {
+            horizontalMargin = self.directionalLayoutMargins.leading + self.directionalLayoutMargins.trailing
+        } else {
+            horizontalMargin = self.layoutMargins.left + self.layoutMargins.right
+        }
+        var availableTextWidth: CGFloat = self.bounds.width - horizontalMargin
+        if iconImageView.image != .none {
+            availableTextWidth -= self.iconSize.width + self.spacing
+        }
+        let availableTextSize = CGSize(width: availableTextWidth, height: CGFloat.greatestFiniteMagnitude)
+        let titleHeight = self.titleLabel.sizeThatFits(availableTextSize).height
+        let descriptionHeight = self.descriptionLabel.sizeThatFits(availableTextSize).height
+        let totalTextHeight = titleHeight + descriptionHeight
         let textWithSpacingHeight = self.spacing + totalTextHeight
         let height = max(self.iconSize.height, textWithSpacingHeight)
         let paddedHeight: CGFloat
