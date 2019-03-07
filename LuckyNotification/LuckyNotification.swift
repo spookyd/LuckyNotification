@@ -118,6 +118,13 @@ public class LuckyNotification {
 
         timers[notificationType] = timer
     }
+    
+    public func dismissVisibleNotifications(_ animated: Bool = true) {
+        guard self.applicationTopMostViewController == self.notificationViewController else {
+            return
+        }
+        dismissNotification(animated)
+    }
 
     public func cancelScheduledMessage(for notificationType: NotificationType) {
         timers[notificationType]?.invalidate()
@@ -164,6 +171,10 @@ extension LuckyNotification {
 
     public static func scheduleNotification(_ notification: Notification, inSeconds seconds: TimeInterval, notificationType: NotificationType) {
         shared.scheduleNotification(notification, inSeconds: seconds, notificationType: notificationType)
+    }
+    
+    public static func dismissVisibleNotifications(_ animated: Bool = true) {
+        shared.dismissNotification(animated)
     }
 
     public static func cancelScheduledMessage(for notificationType: NotificationType) {

@@ -22,13 +22,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func handleShowLocalNotification(_ sender: Any) {
-        var notification = Notification(message: NSAttributedString(string: "Sorry, you've been invited to an accepted group at Stanford University. Upload your acceptance letter to gain access."))
-        notification.icon = #imageLiteral(resourceName: "errorIcon")
-        var config = NotificationConfiguration.default
-        config.minimumHeight = 400
-        let provider = LuckyNotification()
-        provider.configuration = config
-        provider.showNotification(notification)
+        notification.dismissVisibleNotifications(false)
     }
     
     private var transitionManager = NotificationTransitionManager()
